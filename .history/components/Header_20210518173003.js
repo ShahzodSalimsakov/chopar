@@ -26,6 +26,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
+
+    [theme.breakpoints.down('xs')]: {
+      padding: 5,
+    },
   },
 }))
 

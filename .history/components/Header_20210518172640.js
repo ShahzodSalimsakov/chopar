@@ -17,6 +17,11 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     left: 10,
     top: 0,
+    [theme.breakpoints.down('xs')]: {
+      left: '50%',
+      top: 6,
+      marginLeft: -60,
+    },
   },
   toolbar: {
     padding: 0,
@@ -26,6 +31,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
+
+    [theme.breakpoints.down('xs')]: {
+      padding: 5,
+    },
   },
 }))
 
@@ -42,7 +51,7 @@ export default function Header({ menu }) {
         <Container maxWidth="lg" className={classes.container}>
           <Link href="/">
             <a>
-              <Logo style={{ width: 196, height: 80 }} className={classes.logo} />
+              <Logo style={{ width: 196, height: 76 }} className={classes.logo} />
             </a>
           </Link>
           <Search />

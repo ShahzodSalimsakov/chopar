@@ -3,13 +3,13 @@ import { makeStyles } from '@material-ui/core/styles'
 import AppBar from 'react-storefront/AppBar'
 import CartButton from 'react-storefront/CartButton'
 import Search from './search/Search'
-import Logo from '../components/assets/choparlogo.svg'
 import { Container } from '@material-ui/core'
 import Menu from 'react-storefront/menu/Menu'
 import MenuButton from 'react-storefront/menu/MenuButton'
 import Link from 'react-storefront/link/Link'
 import SessionContext from 'react-storefront/session/SessionContext'
 import get from 'lodash/get'
+import Image from 'next/image'
 
 const useStyles = makeStyles(theme => ({
   title: {},
@@ -17,6 +17,11 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     left: 10,
     top: 0,
+    [theme.breakpoints.down('xs')]: {
+      left: '50%',
+      top: 6,
+      marginLeft: -60,
+    },
   },
   toolbar: {
     padding: 0,
@@ -26,6 +31,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
+
+    [theme.breakpoints.down('xs')]: {
+      padding: 5,
+    },
   },
 }))
 
@@ -42,7 +51,12 @@ export default function Header({ menu }) {
         <Container maxWidth="lg" className={classes.container}>
           <Link href="/">
             <a>
-              <Logo style={{ width: 196, height: 80 }} className={classes.logo} />
+              <Image
+                src="/components/assets/headerlogo.png"
+                alt="Picture of the author"
+                width={500}
+                height={500}
+              />
             </a>
           </Link>
           <Search />
