@@ -39,13 +39,18 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-storefront": "^8.17.4",
+    "react-storefront-salesforce-commerce-cloud-connector": "0.0.2",
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.2.5",
     "babel-plugin-transform-imports": "^2.0.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
+    "postcss": "^8.3.0",
+    "prettier": "^1.19.1",
+    "tailwindcss": "^2.1.2"
   },
   "lint-staged": {
     "*.js": [
